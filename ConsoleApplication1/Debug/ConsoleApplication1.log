@@ -1,7 +1,2 @@
-﻿  DataReader.cpp
-D:\C++\Github\pokemon-pocket-book\ConsoleApplication1\DataReader.cpp(35,23): warning C4018: '<': signed/unsigned mismatch
-D:\C++\Github\pokemon-pocket-book\ConsoleApplication1\DataReader.cpp(46,41): warning C4018: '<': signed/unsigned mismatch
-D:\C++\Github\pokemon-pocket-book\ConsoleApplication1\DataReader.cpp(57,41): warning C4018: '<': signed/unsigned mismatch
-D:\C++\Github\pokemon-pocket-book\ConsoleApplication1\DataReader.cpp(68,41): warning C4018: '<': signed/unsigned mismatch
-D:\C++\Github\pokemon-pocket-book\ConsoleApplication1\DataReader.cpp(79,41): warning C4018: '<': signed/unsigned mismatch
+﻿  main.cpp
   ConsoleApplication1.vcxproj -> D:\C++\Github\pokemon-pocket-book\ConsoleApplication1\Debug\ConsoleApplication1.exe

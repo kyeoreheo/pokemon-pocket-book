@@ -14,4 +14,7 @@ int main()
 	cout << dataReader.type[2] << endl;
 	cout << dataReader.height[5] << endl;
 	cout << dataReader.friends[1] << endl;
+
+	Pokemon pokemon(dataReader.pokemonNames[0], dataReader.height[0], dataReader.weight[0], dataReader.type[0]);
+
 }
