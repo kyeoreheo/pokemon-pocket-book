@@ -1,0 +1,2 @@
+D:\C++\Github\pokemon-pocket-book\ConsoleApplication1\Debug\ConsoleApplication1.exe
+D:\C++\Github\pokemon-pocket-book\ConsoleApplication1\Debug\ConsoleApplication1.pdb

@@ -1,2 +1,5 @@
-﻿  main.cpp
+﻿  Pokemon.cpp
+D:\C++\Github\pokemon-pocket-book\ConsoleApplication1\Pokemon.cpp(39,20): warning C4018: '<': signed/unsigned mismatch
+D:\C++\Github\pokemon-pocket-book\ConsoleApplication1\Pokemon.cpp(58,20): warning C4018: '<': signed/unsigned mismatch
+D:\C++\Github\pokemon-pocket-book\ConsoleApplication1\Pokemon.cpp(67,22): warning C4018: '<': signed/unsigned mismatch
   ConsoleApplication1.vcxproj -> D:\C++\Github\pokemon-pocket-book\ConsoleApplication1\Debug\ConsoleApplication1.exe
