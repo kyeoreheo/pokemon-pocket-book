@@ -8,13 +8,15 @@ class Pokemon {
 public:
 	Pokemon();
 	~Pokemon();
-	Pokemon(const std::string &name, const std::string &height, const std::string &weight, const std::string &type);
+	Pokemon(const std::string &name, const std::string &height, const std::string &weight, const std::string &type, const std::string &friends);
 	
-	void addFriend(const std::string &name);
+	std::string getName();
+	void addFriend(const Pokemon &name);
 	void removeFriendByName(const std::string &name);
 	void clearFriends();
 	int numberOfFriends();
-	void info(); // dispay "name: -- \n height: -- \n weight: -- \n type: -- \n friends --, -- ..."
+	void info(); // display "name: -- \n height: -- \n weight: -- \n type: -- \n friends --, -- ..."
+	void separateFriends(const std::string &friendName);
 
 private:	
 	std::string name_;
@@ -22,6 +24,7 @@ private:
 	std::string weight_;
 	std::string type_;
 	std::vector<Pokemon> friends_;
+	std::vector<std::string> friendNames_;
 };
 
 #endif
