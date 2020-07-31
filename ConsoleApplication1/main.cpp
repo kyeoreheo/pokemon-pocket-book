@@ -7,11 +7,23 @@
 
 using namespace std;
 
-void generateFriends(const vector<Pokemon> &inputPokeDex) {
-	for(int i = 0; i < inputPokeDex.size(); i++){
-		for (int j = 0; j < inputPokeDex[i].; j++) {
-
+int pokemonIndexByName(const vector<Pokemon>& pokeDex, const string& inputName) {
+	for (int i = 0; i < pokeDex.size(); i++) {
+		if (inputName == pokeDex[i].getName()) {
+			return i;
 		}
+	}
+	return -1;
+}
+
+void linkFriends(vector<Pokemon> &inputPokeDex) {
+	for (int i = 0; i < inputPokeDex.size(); i++) {
+		for (int j = 0; j < inputPokeDex[i].friendNames_.size(); j++) {
+			string name = inputPokeDex[i].friendNames_[j];
+			int friendIndex = pokemonIndexByName(inputPokeDex, name);
+			inputPokeDex[i].addFriend(inputPokeDex[friendIndex]);
+		}
+	}
 }
 
 int main()
@@ -21,9 +33,12 @@ int main()
 
 	for (int i = 0; i < dataReader.pokemonNames.size(); i++) {
 		Pokemon temp(dataReader.pokemonNames[i], dataReader.height[i], dataReader.weight[i], dataReader.type[i], dataReader.friends[i]);
+		pokeDex.push_back(temp);
 	}
 
+	linkFriends(pokeDex);
 
+	pokeDex[0].friends_[0].info();
 	
 	//cout << dataReader.pokemonNames[3] << endl;
 	//cout << dataReader.type[2] << endl;

@@ -26,8 +26,7 @@ Pokemon::Pokemon(const std::string& name, const std::string& height, const std::
 	separateFriends(friendNames);
 }
 
-
-std::string Pokemon::getName() {
+std::string Pokemon::getName() const {
 	return name_;
 }
 
@@ -63,9 +62,9 @@ void Pokemon::info() {
 void Pokemon::separateFriends(const std::string& friendName) {
 	std::string temp = "";
 	int currentIndex = 0;
-	std::cout << friendName << std::endl;
+	//std::cout << friendName << std::endl;
 	while (currentIndex < friendName.size()) {
-		std::cout << currentIndex << std::endl;
+		//std::cout << currentIndex << std::endl;
 		if (friendName[currentIndex] != ',') {
 			temp += friendName[currentIndex];
 			currentIndex++;
