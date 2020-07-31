@@ -15,6 +15,7 @@ public:
 	std::vector<std::string> weight;
 	std::vector<std::string> type;
 	std::vector<std::string> friends;
+	std::string removeSpaces(const std::string& inputString) const;
 
 private:
 	void readFile(); //read the inputfile and generate pokemonData and firendsData

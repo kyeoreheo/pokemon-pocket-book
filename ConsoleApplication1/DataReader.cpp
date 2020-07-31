@@ -37,7 +37,7 @@ void DataReader::separateCategories(const std::string& inputLine) {
             temp += inputLine[i];
         }
         else {
-            pokemonNames.push_back(temp);
+            pokemonNames.push_back(removeSpaces(temp));
             temp = "";
             currentCategory = i;
             break;
@@ -48,7 +48,7 @@ void DataReader::separateCategories(const std::string& inputLine) {
             temp += inputLine[i];
         }
         else {
-            height.push_back(temp);
+            height.push_back(removeSpaces(temp));
             temp = "";
             currentCategory = i;
             break;
@@ -59,7 +59,7 @@ void DataReader::separateCategories(const std::string& inputLine) {
             temp += inputLine[i];
         }
         else {
-            weight.push_back(temp);
+            weight.push_back(removeSpaces(temp));
             temp = "";
             currentCategory = i;
             break;
@@ -70,7 +70,7 @@ void DataReader::separateCategories(const std::string& inputLine) {
             temp += inputLine[i];
         }
         else {
-            type.push_back(temp);
+            type.push_back(removeSpaces(temp));
             temp = "";
             currentCategory = i;
             break;
@@ -79,5 +79,16 @@ void DataReader::separateCategories(const std::string& inputLine) {
     for (int i = currentCategory + 2; i < inputLine.size(); i++) {
         temp += inputLine[i];
     }
-    friends.push_back(temp);
+    friends.push_back(removeSpaces(temp));
+}
+
+std::string DataReader::removeSpaces(const std::string& inputString) const {
+    std::string result;
+    int currentCategory = 0;
+    for (int i = 0; i < inputString.size(); i++) {
+        if (inputString[i] != ' ') {
+            result += inputString[i];
+        }
+    }
+    return result;
 }
